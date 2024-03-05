@@ -7,7 +7,16 @@ class MyNode {
 
 export class LinkedList implements Sortable {
   head: MyNode | null = null;
-
+  print(): void {
+    if (!this.head) {
+      return;
+    }
+    let node: MyNode | null = this.head;
+    while (node) {
+      console.log(node.data);
+      node = node.next;
+    }
+  }
   compare(leftIndx: number, rightIndx: number): boolean {
     if (!this.head) {
       throw new Error('List is empty');

@@ -17,4 +17,4 @@ for (let i = 0; i < linkedListData.length; i++) {
 
 const linkedListSorter = new Sorter(linkedList);
 linkedListSorter.sort();
-console.log(linkedListSorter.collections);
+linkedList.print();
