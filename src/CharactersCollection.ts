@@ -1,10 +1,13 @@
-import { Sortable } from './Sorter';
+import { Sortable, Sorter } from './Sorter';
 
-export class CharactersCollection implements Sortable {
-  constructor(public data: string) {}
+export class CharactersCollection extends Sorter {
+  constructor(public data: string) {
+    super();
+  }
   get length(): number {
     return this.data.length;
   }
+
   compare(leftIndx: number, rightIndx: number): boolean {
     return (
       this.data[leftIndx].toUpperCase() > this.data[rightIndx].toUpperCase()
